@@ -26,6 +26,7 @@ public class CommonActions {
 
 	// ✅ Click element safely
 	public void clickElement(By locator) {
+		waitForToastToDisappear();
 		wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
 	}
 
@@ -70,5 +71,12 @@ public class CommonActions {
 		byte[] src = ts.getScreenshotAs(OutputType.BYTES);
 		// You can save to path using FileUtils (Apache Commons IO) if needed
 		System.out.println("Screenshot captured for: " + fileName);
+	}
+	
+	public void waitForToastToDisappear() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    wait.until(ExpectedConditions.invisibilityOfElementLocated(
+	    		 By.cssSelector(".Toastify__toast-container")
+	    ));
 	}
 }

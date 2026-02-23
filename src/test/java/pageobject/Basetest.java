@@ -16,6 +16,8 @@ public class Basetest {
 		action = new CommonActions(driver);
 		PageFactory.initElements(driver, this);
 	}
+	
+
 
 
 }

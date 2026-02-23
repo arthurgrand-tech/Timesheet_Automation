@@ -10,10 +10,17 @@ public class DashBoardPage extends Basetest{
 	}
 	
 	By dashboard_roll = By.className("css-1wy0on6");
+	By profileicon = By.xpath("//li[@class='cursor-pointer ms-1']");
+	By logout = By.xpath("//button[@class='signout-item']");
 	
 	
 	public void selectelement() {
 	
+	}
+	public void clicklogout()  {
+		
+		action.clickElement(profileicon);
+		action.clickElement(logout);
 	}
 
 

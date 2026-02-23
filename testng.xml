@@ -6,7 +6,7 @@
 </listeners>
   <test name="Test">
         <classes>
-            <class name="testcase.TC001_login"/>
+            <class name="TC002_CustomerTest"/>
         </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
